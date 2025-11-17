@@ -14,8 +14,9 @@ class Settings(BaseSettings):
     QDRANT_PORT: str = "6333"
     QDRANT_HOST: str | None = None
 
-    TEXT_MODEL_NAME: str = "llama-3.3-70b-versatile"
-    SMALL_TEXT_MODEL_NAME: str = "gemma2-9b-it"
+    TEXT_MODEL_NAME: str = "llama-3.3-70b-versatile" 
+    # gemma2-9b-it has been decommissioned and is no longer supported.
+    SMALL_TEXT_MODEL_NAME: str = "llama-3.1-8b-instant"
     STT_MODEL_NAME: str = "whisper-large-v3-turbo"
     TTS_MODEL_NAME: str = "eleven_flash_v2_5"
     TTI_MODEL_NAME: str = "black-forest-labs/FLUX.1-schnell-Free"
