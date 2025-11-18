@@ -30,18 +30,14 @@ You get **Ava**, a Whatsapp agent that can engage with users in a "realistic" wa
 By the end of this course, you'll have built your own Ava too, capable of:
 
 
-* Receiving and sending Whatsapp messages 📲
-* Understanding your voice 🗣️
-* Recognizing your images 🖼️
-* Sending voice notes back 🎤
-* Sharing updates about its "daily activities" 🚣
-* Sending you images of its current activities 🖼️
+* Receiving and sending WhatsApp text messages ??
+* Remembering what you share thanks to short- and long-term memory ??
+* Sharing updates about its "daily activities" ???
 
->You can think of it as a modern reinterpretation of the Turing Test 🤣
+>You can think of it as a modern reinterpretation of the Turing Test ??
 
 Excited? Let's get started! 
 
-<div style="text-align: center;">
     <video src="https://github.com/user-attachments/assets/6d1abefc-b4d8-4f66-9db6-a0e54b8df944" controls width="100%"></video>
 </div>
 
@@ -103,13 +99,10 @@ This course is for Software Engineers, ML Engineers, and AI Engineers who want t
 * Get a solid understanding of how to build LangGraph workflows
 * Set up a long-term memory system using Qdrant as a Vector Database
 * Use Groq models to power AI Agent responses
-* Implement STT systems using Whisper
-* Implement TTS systems using ElevenLabs
-* Generate high-quality images using diffusion models, like FLUX models
-* Process images using VLM models, like llama-3.2-vision
 * Create chat interfaces using Chainlit
 * Deploy agentic applications to Cloud Run
 * Connect agentic applications to the WhatsApp API
+* Operate a reliable, text-only companion that stays in character
 
 ## Getting started
 
@@ -128,9 +121,7 @@ All of this is detailed in the following doc: [GETTING STARTED.md](docs/GETTING_
 | <div align="center">1</div> | [Project overview](https://theneuralmaze.substack.com/p/meet-ava-the-whatsapp-agent) | <a href="https://youtu.be/u5y06cFK2WA?si=RCx__sJNtr2DYf0U"><img src="img/video_thumbnails/thumbnail_1_play.png" alt="Thumbnail 1" width="400"></a> | Understand the project architecture and the tech stack. |
 | <div align="center">2</div> | [Dissecting Ava's brain](https://theneuralmaze.substack.com/p/dissecting-avas-brain) | <a href="https://youtu.be/nTsLL3htkCU?si=aSmSkpL-U3rzw9Za"><img src="img/video_thumbnails/thumbnail_2_play.png" alt="Thumbnail 2" width="400"></a> | Learn the basics of LangGraph and implement complex workflows using this framework. |
 | <div align="center">3</div> | [Unlocking Ava's memories](https://theneuralmaze.substack.com/p/can-agents-get-nostalgic-about-the) | <a href="https://youtu.be/oTHqYEpdFXg?si=MXEvjUJ8Xbc6h9l2"><img src="img/video_thumbnails/thumbnail_3_play.png" alt="Thumbnail 3" width="400"></a> | Build a short-term memory system for graph state persistence and chat history. Also, implement a long-term memory system using Qdrant. |
-| <div align="center">4</div> | [Giving Ava a Voice](https://theneuralmaze.substack.com/p/the-ultimate-ai-voice-pipeline) | <a href="https://youtu.be/RNmwvMjtIt0"><img src="img/video_thumbnails/thumbnail_4_play.png" alt="Thumbnail 4" width="400"></a> | Build a STT and a TTS pipeline to make Ava process input and output audio. |
-| <div align="center">5</div> | [Ava learns to see](https://theneuralmaze.substack.com/p/reading-images-drawing-dreams-vlms) | <a href="https://youtu.be/LS7k-XFBbeo"><img src="img/video_thumbnails/thumbnail_5_play.png" alt="Thumbnail 5" width="400"></a> | Understand how to process images using VLM models. Implement an image generation pipeline using FLUX models. |
-| <div align="center">6</div> | [Ava installs Whatsapp](https://theneuralmaze.substack.com/p/connecting-an-ai-agent-to-whatsapp) | <a href="https://youtu.be/dFsI4lnUkKo"><img src="img/video_thumbnails/thumbnail_6_play.png" alt="Thumbnail 6" width="400"></a> | Connect Ava to WhatsApp. Learn how to deploy a LangGraph application to Google Cloud Run. |
+| <div align="center">4</div> | [Ava installs Whatsapp](https://theneuralmaze.substack.com/p/connecting-an-ai-agent-to-whatsapp) | <a href="https://youtu.be/dFsI4lnUkKo"><img src="img/video_thumbnails/thumbnail_6_play.png" alt="Thumbnail 6" width="400"></a> | Connect Ava to WhatsApp. Learn how to deploy a LangGraph application to Google Cloud Run. |
 
 And if you're feeling extra brave, there's also a 2+ hour video course where we walk through all the project details and the code, step by step.
 
@@ -144,7 +135,7 @@ And if you're feeling extra brave, there's also a 2+ hour video course where we 
 
 The awesome thing about this project is **you can run it on your own computer for free!**
 
-The **free tiers** from Groq, ElevenLabs, Qdrant Cloud, and Together AI are more than enough to get you going.
+The **free tiers** from Groq and Qdrant Cloud are more than enough to get you going.
 
 If you want to try it out on Google Cloud Run, you can get a free account and get $300 in free credits. Even if you've already used up your free credits, Cloud Run is super cheap - so it will take just a buck or two for your experiments.
 
@@ -159,7 +150,7 @@ If you want to try it out on Google Cloud Run, you can get a free account and ge
   </tr>
   <tr>
     <td><img src="img/groq_logo.png" width="100" alt="Groq Logo"/></td>
-    <td>Powering the project with Llama 3.3, Llama 3.2 Vision, and Whisper. Groq models are awesome (and fast!!)</td>
+    <td>Powering the project with Llama 3.3 for conversations (plus smaller Groq Llama variants for memory extraction). Groq models are awesome (and fast!!)</td>
   </tr>
   <tr>
     <td><img src="img/qdrant_logo.png" width="100" alt="Qdrant Logo"/></td>
@@ -172,14 +163,6 @@ If you want to try it out on Google Cloud Run, you can get a free account and ge
   <tr>
     <td><img src="img/langgraph_logo.png" width="100" alt="LangGraph Logo"/></td>
     <td>Learn how to build production-ready LangGraph workflows</td>
-  </tr>
-  <tr>
-    <td><img src="img/elevenlabs_logo.png" width="100" alt="ElevenLabs Logo"/></td>
-    <td>Amazing TTS models</td>
-  </tr>
-  <tr>
-    <td><img src="img/together_logo.png" width="100" alt="Together AI Logo"/></td>
-    <td>Behind Ava's image generation process</td>
   </tr>
 </table>
 
@@ -257,3 +240,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
     <img src="https://img.shields.io/static/v1?label&logo=youtube&message=Subscribe%20Now&style=for-the-badge&color=FF0000&scale=2" alt="Subscribe Now" height="40">
   </a>
 </p>
+
+

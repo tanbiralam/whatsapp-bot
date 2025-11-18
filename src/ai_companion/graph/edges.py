@@ -18,14 +18,7 @@ def should_summarize_conversation(
 
 def select_workflow(
     state: AICompanionState,
-) -> Literal["conversation_node", "image_node", "audio_node"]:
-    workflow = state["workflow"]
-
-    if workflow == "image":
-        return "image_node"
-
-    elif workflow == "audio":
-        return "audio_node"
-
-    else:
-        return "conversation_node"
+) -> Literal["conversation_node"]:
+    """Always route to the conversation node in the text-only workflow."""
+    _ = state.get("workflow", "conversation")
+    return "conversation_node"

@@ -49,11 +49,6 @@ You'll notice there are a lot of variables that need to be set.
 ```
 GROQ_API_KEY=""
 
-ELEVENLABS_API_KEY=""
-ELEVENLABS_VOICE_ID=""
-
-TOGETHER_API_KEY=""
-
 QDRANT_URL=""
 QDRANT_API_KEY=""
 
@@ -72,22 +67,6 @@ To create the GROQ_API_KEY, and be able to interact with Groq models, you just n
 ![alt text](img/groq_api_key.png)
 
 Once you have created the API key, you can copy it and paste it into an `.env` file (following the same format as the `.env.example` file).
-
-### ElevenLabs
-
-To create the ELEVENLABS_API_KEY you need to create an account in [ElevenLabs](https://elevenlabs.io/). After that, go to your account settings and create the API key.
-
-![alt text](img/elevenlabs_api_key.png)
-
-As for the voice ID, you can check the available voices and select the one you prefer! We'll cover this in a dedicated lesson.
-
-### Together AI
-
-Log in to [Together AI](https://www.together.ai/) and, inside your account settings, create the API key.
-
-![alt text](img/together_api_key.png)
-
-As we did with the previous API keys, copy the value and paste it into your own `.env` file.
 
 ### Qdrant
 

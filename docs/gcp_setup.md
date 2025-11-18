@@ -54,18 +54,6 @@ echo -n "<put_your_groq_api_key_here>" | gcloud secrets create GROQ_API_KEY \
     --replication-policy="automatic" \
     --data-file=-
 
-echo -n "<put_your_elevenlabs_api_key_here>" | gcloud secrets create ELEVENLABS_API_KEY \
-    --replication-policy="automatic" \
-    --data-file=-
-
-echo -n "<put_your_elevenlabs_voice_id_here>" | gcloud secrets create ELEVENLABS_VOICE_ID \
-    --replication-policy="automatic" \
-    --data-file=-
-
-echo -n "<put_your_together_api_key_here>" | gcloud secrets create TOGETHER_API_KEY \
-    --replication-policy="automatic" \
-    --data-file=-
-
 echo -n "<put_your_qdrant_url_here>" | gcloud secrets create QDRANT_URL \
     --replication-policy="automatic" \
     --data-file=-
