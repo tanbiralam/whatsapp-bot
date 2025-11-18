@@ -1,3 +1,5 @@
+import logging
+
 from langchain_core.messages import AIMessage, HumanMessage, RemoveMessage
 from langchain_core.runnables import RunnableConfig
 
@@ -10,6 +12,9 @@ from ai_companion.graph.utils.helpers import get_chat_model
 from ai_companion.modules.memory.long_term.memory_manager import get_memory_manager
 from ai_companion.modules.schedules.context_generation import ScheduleContextGenerator
 from ai_companion.settings import settings
+
+
+logger = logging.getLogger(__name__)
 
 
 async def router_node(state: AICompanionState):
@@ -73,7 +78,10 @@ async def memory_extraction_node(state: AICompanionState):
         return {}
 
     memory_manager = get_memory_manager()
-    await memory_manager.extract_and_store_memories(state["messages"][-1])
+    try:
+        await memory_manager.extract_and_store_memories(state["messages"][-1])
+    except Exception as exc:  # pragma: no cover - defensive guardrail
+        logger.warning("Skipping memory extraction due to upstream error: %s", exc)
     return {}
 
 
